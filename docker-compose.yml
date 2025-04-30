@@ -1,0 +1,21 @@
+
+version: '3.8'
+
+services:
+  uploader:
+    build:
+      context: ./uploader
+      dockerfile: Dockerfile
+    ports:
+      - "5000:10000"
+    container_name: uploader
+
+  telegram_bot:
+    build:
+      context: ./bot
+      dockerfile: Dockerfile
+    environment:
+      - BOT_TOKEN=your_telegram_bot_token
+      - UPLOADER_URL=http://uploader:10000/upload
+    depends_on:
+      - uploader
