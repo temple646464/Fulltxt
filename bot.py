@@ -4,7 +4,7 @@ import requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("8086953920:AAGYBOwM4ysQ0bZKrOJn0IADQE439nz1t2E")
 UPLOADER_URL = os.getenv("UPLOADER_URL")
 
 async def handle_txt(update: Update, context: ContextTypes.DEFAULT_TYPE):
